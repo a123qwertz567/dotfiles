@@ -1,0 +1,68 @@
+#sxhkd config
+#listen for key events by keysym
+#
+#robin audio control
+#
+XF86Audio{Mute,LowerVolume,RaiseVolume}
+   ~/sxhkd/actions/pulseaudio-ctl.sh {mute,down,up}
+
+#mute and unmute volume with the mute button on the keyboard
+#XF86AudioMute
+#   bash /home/a123qwertz567/sxhkd/actions/volmute.sh
+#
+#rotate screen output and stylus input with the special rotate-button on the tabletframe
+XF86RotateWindows
+   bash /home/a123qwertz567/sxhkd/actions/rotation.sh
+#
+#increase volume by with special volume-up button
+#XF86AudioRaiseVolume
+#   bash /home/a123qwertz567/sxhkd/actions/volup.sh
+#
+#lower volume by special volume-down button
+#XF86AudioLowerVolume
+#   bash /home/a123qwertz567/sxhkd/actions/voldw.sh
+#
+#increase brightness by special brightness-up button
+XF86MonBrightnessUp
+   bash /home/a123qwertz567/sxhkd/actions/brightup.sh
+#
+#decrease brighthness by special brightness-down button
+XF86MonBrightnessDown
+   bash /home/a123qwertz567/sxhkd/actions/brightdw.sh
+#
+#mute and unmute mic by software
+XF86AudioMicMute
+   bash /home/a123qwertz567/sxhkd/actions/micctrl.sh
+#
+#toogle brightness in tablet mode with second button next to rotate button
+XF86TaskPane
+   bash /home/a123qwertz567/sxhkd/actions/brighttoogle.sh
+#
+#toogle trackball
+XF86TouchpadToggle
+   bash /home/a123qwertz567/sxhkd/actions/trackballtoogle.sh
+#
+#make a instant webcam shot
+XF86WebCam
+   bash /home/a123qwertz567/sxhkd/actions/webcamcrtl.sh
+#
+#lock screen instant
+XF86ScreenSaver
+   bash /home/a123qwertz567/sxhkd/actions/screenlock.sh
+#
+#lock screen when sleep is activated
+#XF86Sleep
+#   bash /home/a123qwertz567/sxhkd/actions/screenlock.sh
+#
+#open powertop batterytool
+XF86Battery
+  /home/a123qwertz567/sxhkd/actions/powertop.sh
+#
+#show cpu temp in a terminal
+#for lxterminal parameters check "man lxtemrinal"
+XF86Display
+   xfce4-terminal -e "sxhkd/actions/tempmonitor.sh" -T "CPU-Temp" --geometry=25x5 --hide-menubar --hide-toolbar
+#
+#disable touchscreen
+XF86Launch1
+      bash /home/a123qwertz567/sxhkd/actions/touchscreentoogle.sh

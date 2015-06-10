@@ -22,7 +22,7 @@ git_init()
     PWD=$(pwd | sed 's/\//\
 /g' | tail -1)
     git_add_remote origin ${GITURL}/${PWD}.git
-    git_add_remote gh https://github.com/sulami/${PWD}.git
+#   git_add_remote gh https://github.com/sulami/${PWD}.git
 }
 
 git_hist()

@@ -8,15 +8,15 @@ compinit
 
 # Zsh does not load .profile like ksh does (at least not by default w/o
 # any compability mode, but we need it for login shells on OpenBSD.
-if [[ $(uname) == "OpenBSD" && -o login && -z $TMUX ]]; then
-    source $HOME/.profile
-fi
+#if [[ $(uname) == "OpenBSD" && -o login && -z $TMUX ]]; then
+#    source $HOME/.profile
+#fi
 
 # If on Arch, source the pkgfile command-not-found script that tells us
 # where to find a binary that is not installed.
-if [[ $(uname) == "Linux" ]]; then
-    source /usr/share/doc/pkgfile/command-not-found.zsh
-fi
+#if [[ $(uname) == "Linux" ]]; then
+#    source /usr/share/doc/pkgfile/command-not-found.zsh
+#fi
 
 # Activate syntax highlighting
 # source "$HOME/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
@@ -63,13 +63,13 @@ else
     export EDITOR=vim
     export VISUAL=vim
 fi
-export BROWSER=firefox
-export XDG_CONFIG_HOME="$HOME"
-export PATH=$PATH:$HOME/.local/bin
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
-export GOPATH=$HOME/build/go
+#export BROWSER=firefox
+#export XDG_CONFIG_HOME="$HOME"
+#export PATH=$PATH:$HOME/.local/bin
+#export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+#export GOPATH=$HOME/build/go
 export GOMAXPROCS=8
-export GITSERVER=pi@peerwire.dtdns.net
+export GITSERVER=git@raspberrypi
 export GITURL=ssh://${GITSERVER}/srv/git
 
 # ALIASES

@@ -4,6 +4,12 @@ super + Return
 super + r
     dmenu_run
 
+super + t
+    thunar
+
+super + f
+    firefox
+
 super + {Up,Left,Down,Right}
     xdotool mousemove_relative -- {0 -30,-30 0,0 30,30 0}
 
@@ -20,14 +26,14 @@ super + alt + {Left,Down,Right}
 Print
     scrot -e 'mv $f ~/Downloads/'
 
-XF86Display
-    /home/sulami/dotfiles/scripts/dock.sh
+#XF86Display
+    #/home/sulami/dotfiles/scripts/dock.sh
 
 XF86Audio{Play,Stop,Prev,Next}
     mpc -q {toggle,stop,prev,next}
 
-XF86Audio{Mute,LowerVolume,RaiseVolume}
-    /home/sulami/dotfiles/scripts/pulseaudio-ctl.sh {mute,down,up}
+ XF86Audio{Mute,LowerVolume,RaiseVolume}
+     /home/sulami/dotfiles/scripts/pulseaudio-ctl.sh {mute,down,up}
 
 super + backslash
     /home/sulami/dotfiles/scripts/pulseaudio-ctl.sh mute-input

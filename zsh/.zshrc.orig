@@ -74,6 +74,13 @@ fi
 #export XDG_CONFIG_HOME="$HOME"
 #export PATH=$PATH:$HOME/.local/bin
 #export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+#export GOPATH=$HOME/build/go
+=======
+export BROWSER=firefox
+export PATH=$PATH:$HOME/.local/bin
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+export GOPATH=$HOME/build/go
+>>>>>>> 57f5cc348ea9e20539ece656dd7e096b57bb25e3
 export GOMAXPROCS=8
 export GITSERVER=git@raspberrypi
 export GITURL=ssh://${GITSERVER}/srv/git
@@ -176,6 +183,7 @@ if [ "$TERM" = "linux" ]; then
 fi
 
 # Colored manpages
+export MANPAGER='less'
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
 export LESS_TERMCAP_me=$'\E[0m'

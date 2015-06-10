@@ -16,7 +16,6 @@ set softtabstop=4           " 1 tab = 4 spaces
 set shiftwidth=4            " shift by 4 spaces
 set shiftround              " round indents to multiples of 4 (shiftwidth)
 set expandtab               " expand tabs to spaces
-set breakindent             " properly indent wrapped lines
 set showbreak=->\           " mark wrapped lines
 set backspace=2             " fix backspace with autoindent
 set incsearch               " search while typing
@@ -60,7 +59,7 @@ autocmd BufEnter /tmp/mutt-* set tw=72
 autocmd BufEnter *.gitsendemail.msg.* set tw=72
 
 " Kernel coding style
-autocmd BufEnter */linux/* call KernelStyle()
+autocmd BufEnter *.c call KernelStyle()
 autocmd BufEnter *.go call KernelStyle()
 
 " PEP8 coding style
@@ -79,6 +78,10 @@ autocmd BufEnter *.md set ft=markdown tw=79
 " Cursorline always only in current window
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
+
+" Enable spellchecking for emails and (La)TeX
+autocmd BufEnter /tmp/mutt-* set spell spelllang=en_us
+autocmd BufEnter *.tex set spell spelllang=de_de
 
 " Pathogen
 execute pathogen#infect()
@@ -102,6 +105,9 @@ map <Leader>cc :CtrlPClearCache<CR>
 map <Leader>f :call RenameFile()<CR>
 map <Leader>sk :call KernelStyle()<CR>
 map <Leader>sp :call PEPStyle()<CR>
+map <Leader>se :set spell spelllang=en_us<CR>
+map <Leader>sd :set spell spelllang=de_de<CR>
+map <Leader>so :set nospell<CR>
 map <Leader>dt :diffthis<CR>
 map <Leader>dp :diffput<CR>
 map <Leader>en :cn<CR>

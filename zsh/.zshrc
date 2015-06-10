@@ -14,15 +14,12 @@ compinit
 
 # If on Arch, source the pkgfile command-not-found script that tells us
 # where to find a binary that is not installed.
-<<<<<<< HEAD
 #if [[ $(uname) == "Linux" ]]; then
 #    source /usr/share/doc/pkgfile/command-not-found.zsh
 #fi
-=======
 # if [[ $(uname) == "Linux" ]]; then
 #     source /usr/share/doc/pkgfile/command-not-found.zsh
 # fi
->>>>>>> 57f5cc348ea9e20539ece656dd7e096b57bb25e3
 
 # Activate syntax highlighting
 # source "$HOME/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
@@ -40,7 +37,7 @@ RPS1="%(?..%{$fg[red]%}%?%{$reset_color%} <)"
 # prompt red if we are privileged. For this to work, this needs to be
 # installed as global config.
 function zle-line-init zle-keymap-select {
-    PRMPT="${${KEYMAP/vicmd/N}/(main|viins)/λ}"
+    PRMPT="${${KEYMAP/vicmd/N}/(main|viins)/Ϟ}"
     PS1=" %(!.%{$fg[red]%}.)$PRMPT%{$reset_color%} "
     zle reset-prompt
 }
@@ -69,7 +66,6 @@ else
     export EDITOR=vim
     export VISUAL=vim
 fi
-<<<<<<< HEAD
 #export BROWSER=firefox
 #export XDG_CONFIG_HOME="$HOME"
 #export PATH=$PATH:$HOME/.local/bin
